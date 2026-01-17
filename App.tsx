@@ -1,20 +1,17 @@
-import { StyleSheet, View } from 'react-native';
+import { StyleSheet } from 'react-native';
 import AppText from "./src/components/texts/AppText";
+import AppSaveView from "./src/components/views/AppSaveView";
 
 export default function App() {
   return (
-    <View style={styles.container}>
+    <AppSaveView style={styles.container}>
       <AppText>Hello World!</AppText>
       <AppText variant='bold'>Hello World!</AppText>
-    </View>
+    </AppSaveView>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
   },
 });
