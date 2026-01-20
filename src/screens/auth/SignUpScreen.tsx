@@ -8,22 +8,24 @@ import React, {useState} from "react";
 import AppButton from "../../components/buttons/AppButton";
 import {Colors} from "../../styles/colors";
 
-const SignInScreen = () => {
+const SignUpScreen = () => {
+    const [userName, setUserName] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
 
     return (
         <AppSaveView style={styles.container}>
             <Image source={IMAGE_PATHS.logo} style={styles.logo}/>
+            <AppTextInput placeholder="Username" onChangeText={setUserName}/>
             <AppTextInput placeholder="Email" onChangeText={setEmail}/>
             <AppTextInput placeholder="Passworld" onChangeText={setPassword} secureTextEntry/>
-            <AppButton title="Login" style={styles.login}/>
-            <AppButton title="Register" style={styles.register} textColor={Colors.primary}/>
+            <AppButton title="Create New User" style={styles.createNewUser}/>
+            <AppButton title="Return to Sign In" style={styles.return} textColor={Colors.primary}/>
         </AppSaveView>
     );
 }
 
-export default SignInScreen
+export default SignUpScreen
 
 const styles = StyleSheet.create({
     container: {
@@ -36,13 +38,13 @@ const styles = StyleSheet.create({
         width: s(150),
         marginBottom: vs(30)
     },
-    register: {
+    return: {
         backgroundColor: Colors.white,
         borderWidth: 1,
         marginTop: vs(15),
         borderColor: Colors.primary
     },
-    login: {
+    createNewUser: {
         marginTop: vs(30)
     }
 })
