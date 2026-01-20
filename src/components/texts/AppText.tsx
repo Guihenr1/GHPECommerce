@@ -3,7 +3,7 @@ import React, {FC} from 'react';
 import {s} from 'react-native-size-matters';
 import {Colors} from "../../styles/colors";
 
-interface AppTextProps extends TextProps{
+export interface AppTextProps extends TextProps{
     children: React.ReactNode;
     style?: TextStyle | TextStyle[];
     variant?: 'bold' | 'medium'
@@ -11,7 +11,7 @@ interface AppTextProps extends TextProps{
 
 const AppText : FC<AppTextProps> = ({children, style, variant = 'medium', ...rest}) => {
     return (
-      <Text {...rest} style={[styles[variant], style]}>{children}</Text>
+      <Text {...rest} style={[styles[variant], style ?? {}]}>{children}</Text>
     );
 }
 
