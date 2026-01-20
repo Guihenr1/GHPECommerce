@@ -4,7 +4,7 @@ import {Colors} from '../../styles/colors';
 import {FC} from 'react';
 
 interface AppTextInputProps extends TextInputProps {
-    value: string;
+    value?: string;
     onChangeText: (text: string) => void;
     placeholder?: string;
     secureTextEntry?: boolean;
@@ -13,7 +13,7 @@ interface AppTextInputProps extends TextInputProps {
 }
 
 const AppTextInput: FC<AppTextInputProps> = ({
-                                                 value,
+                                                 value = "",
                                                  onChangeText,
                                                  placeholder,
                                                  secureTextEntry = false,

@@ -1,5 +1,5 @@
 import { StyleSheet, View, ViewStyle} from "react-native";
-import {SafeAreaView, useSafeAreaInsets} from "react-native-safe-area-context";
+import {SafeAreaView} from "react-native-safe-area-context";
 import {Colors} from "../../styles/colors";
 import {FC} from "react";
 import React from "react";
@@ -10,11 +10,9 @@ interface AppSaveViewProps {
 }
 
 const AppSaveView: FC<AppSaveViewProps> = ({children, style}) => {
-    const insets = useSafeAreaInsets();
-
     return (
         <SafeAreaView style={styles.safeArea}>
-            <View style={[styles.container, style, { paddingTop: insets.top }]}>{children}</View>
+            <View style={[styles.container, style]}>{children}</View>
         </SafeAreaView>
     );
 }
