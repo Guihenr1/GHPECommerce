@@ -19,7 +19,8 @@ const SignInScreen = () => {
             <Image source={IMAGE_PATHS.logo} style={styles.logo}/>
             <AppTextInput placeholder="Email" onChangeText={setEmail}/>
             <AppTextInput placeholder="Passworld" onChangeText={setPassword} secureTextEntry/>
-            <AppButton title="Login" style={styles.login}/>
+            <AppButton title="Login" style={styles.login}
+                        onPress={() => navigation.navigate("MainAppBottomTabs")}/>
             <AppButton title="Register" style={styles.register} textColor={Colors.primary}
                        onPress={() => navigation.navigate("SignUpScreen")}/>
         </AppSaveView>
