@@ -7,11 +7,13 @@ import AppTextInput from "../../components/inputs/AppTextInput";
 import React, {useState} from "react";
 import AppButton from "../../components/buttons/AppButton";
 import {Colors} from "../../styles/colors";
+import {useNavigation} from "@react-navigation/native";
 
 const SignUpScreen = () => {
     const [userName, setUserName] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+    const navigation = useNavigation();
 
     return (
         <AppSaveView style={styles.container}>
@@ -20,7 +22,8 @@ const SignUpScreen = () => {
             <AppTextInput placeholder="Email" onChangeText={setEmail}/>
             <AppTextInput placeholder="Passworld" onChangeText={setPassword} secureTextEntry/>
             <AppButton title="Create New User" style={styles.createNewUser}/>
-            <AppButton title="Return to Sign In" style={styles.return} textColor={Colors.primary}/>
+            <AppButton title="Return to Sign In" style={styles.return} textColor={Colors.primary}
+                       onPress={() => navigation.navigate("SignInScreen")}/>
         </AppSaveView>
     );
 }
