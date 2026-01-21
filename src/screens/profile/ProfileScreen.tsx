@@ -1,8 +1,11 @@
-import { Text } from "react-native";
+import AppSaveView from "../../components/views/AppSaveView";
+import HomeHeader from "../../components/headers/HomeHeader";
 
 const ProfileScreen = () => {
     return (
-        <Text>Profile Screen</Text>
+        <AppSaveView>
+            <HomeHeader />
+        </AppSaveView>
     )
 }
 

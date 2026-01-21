@@ -1,8 +1,11 @@
-import { Text } from "react-native";
+import AppSaveView from "../../components/views/AppSaveView";
+import HomeHeader from "../../components/headers/HomeHeader";
 
 const CartScreen = () => {
     return (
-        <Text>Cart Screen</Text>
+        <AppSaveView>
+            <HomeHeader />
+        </AppSaveView>
     )
 }
 
