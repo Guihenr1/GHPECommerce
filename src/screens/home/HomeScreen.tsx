@@ -1,12 +1,13 @@
-import { Text } from "react-native";
 import AppSaveView from "../../components/views/AppSaveView";
 import HomeHeader from "../../components/headers/HomeHeader";
+import AppText from "../../components/texts/AppText";
 
 const HomeScreen = () => {
     return (
         <AppSaveView>
             <HomeHeader />
-            <Text>Home Screen</Text>
+            <AppText>Home Screen</AppText>
+            <AppText variant="bold" >Home Screen</AppText>
         </AppSaveView>
     )
 }
