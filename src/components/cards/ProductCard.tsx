@@ -8,16 +8,16 @@ import {commonStyles} from "../../styles/sharedStyles";
 import {FC} from "react";
 
 export interface IProductCard {
-    onPress: () => void;
+    onAddToCartPress: () => void;
     imageUrl: string;
     title: string;
     price: number | string;
 }
 
-const ProductCard : FC<IProductCard>  = ({onPress, imageUrl, title, price}) => {
+const ProductCard : FC<IProductCard>  = ({onAddToCartPress, imageUrl, title, price}) => {
     return (
         <View style={styles.container}>
-            <TouchableOpacity style={styles.addButton} onPress={onPress}>
+            <TouchableOpacity style={styles.addButton} onPress={onAddToCartPress}>
                 <Ionicons name='cart' size={s(15)} color={Colors.white}/>
             </TouchableOpacity>
 
