@@ -7,5 +7,6 @@ export const Colors = {
     disabledGrey: '#D3D3D3',
     blueGray: '#E6E8EA',
     medGray: '#939393',
-    borderColor: '#ccc'
+    borderColor: '#ccc',
+    red: '#ff2c2c'
 }
